@@ -5,7 +5,7 @@
 
 /**
  * count_format - counts the number of format specifiers in a string
- * format: string param
+ * @format: string param
  * Return: number of format specifiers
  */
 
@@ -28,6 +28,26 @@ int count_format(const char *format)
 
 	return (formatCount);
 }
+
+
+/**
+ * get_str_len - gets the length of a string
+ * @str: string param
+ * Return: length of string
+ */
+
+int get_str_len(char *str)
+{
+	int stringCount = 0;
+
+	while (*str != '\0')
+	{
+		str++;
+		stringCount++;
+	}
+	return (stringCount);
+}
+
 
 /**
  * _printf - returns the number of characters printed
@@ -56,51 +76,21 @@ int _printf(const char *format, ...)
 			{
 			case 'c':
 			{
-				puts("Encountered a char\n");
 				dataCount += 1;
 				break;
 			}
 			case 's':
 			{
-				int stringCount = 0;
-				char *str_ptr = va_arg(ap, char *);
-
-				puts("Encountered a string\n");
-
-
-				while (*str_ptr != '\0')
-				{
-					str_ptr++;
-					stringCount++;
-				}
-
-				dataCount += stringCount;
+				dataCount += get_str_len(va_arg(ap, char *));
 				break;
 			}
 			}
-
 		}
-
 		i++;
 	}
 
 	totalCount = dataCount + countWithoutData;
 	va_end(ap);
 
-	printf("Count without data: %d\n", countWithoutData);
-	printf("Data count: %d\n", dataCount);
-
 	return (totalCount);
 }
-
-/**
- * int main(void)
- * {
- *	int char_num = _printf("Hello %s%s%c", "world", "amazing", 'c');
- *
- *	printf("Number of characters: %d\n", char_num);
- *
- *	return (0);
- *
- * }
- */
