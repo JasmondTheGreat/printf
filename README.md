@@ -1,28 +1,35 @@
-# printf
-This a repository for the ALX team project for the printf.
+# 0x11. C - printf
 
-The printf() function prints output to stdout, according to format and other arguments passed to printf(). 
-The string format consists of two types of items - characters that will be printed to the screen,
-and format commands that define how the other arguments to printf() are displayed. Basically,
-you specify a format string that has text in it, as well as "special" characters
-that map to the other arguments of printf().
+## Concepts
 
+- [Group Projects](./https://alx-intranet.hbtn.io/concepts/111)
+- [Pair Programming - How To](./https://alx-intranet.hbtn.io/concepts/121)
+- [Flowcharts](./https://alx-intranet.hbtn.io/concepts/130)
+- [Technical Writing](./https://alx-intranet.hbtn.io/concepts/225)
 
-The prototype of this function is: int _printf(const char format, ...);
+## Task - Write your own ```printf``` function
 
-This means that it has one mandatory format argument, and an extra number of arguments that can be none, or many.
+## Resources
 
-Format of the format string
+- [Secrets of printf](./https://alx-intranet.hbtn.io/rltoken/7Vw7aUWgwC7JYUrqI4bh4Q)
+- [Group Projects concept page](././https://alx-intranet.hbtn.io/concepts/111)
+- [Flowcharts concept page](././https://alx-intranet.hbtn.io/concepts/130)
 
-The format string is a character string starting and ending with double quotes. The format string is composed of zero or more directives; ordinary characters (not %), and conversion specifications, each of which results in fetching zero or more subsequent arguments.
+## Tasks
 
-Each conversion specification is introduced by the character % and ends with a conversion specifier. In between there may be (in this order):
-
-Zero or more flags
-
-An optional field width
-
-An optional precision modifier
-
-An optional length modifier
-
+0. I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life
+1. Education is when you read the fine print. Experience is what you get if you don't
+2. With a face like mine, I do better in print
+3. What one has not experienced, one will never understand in print
+4. Nothing in fine print is ever good news
+5. My weakness is wearing too much leopard print
+6. How is the world ruled and led to war? Diplomats lie to journalists and believe these lies when they see them in print
+7. The big print gives and the small print takes away
+8. Sarcasm is lost in print
+9. Print some money and give it to us for the rain forests
+10. The negative is the equivalent of the composer's score, and the print the performance
+11. It's depressing when you're still around and your albums are out of print
+12. Every time that I wanted to give up, if I saw an interesting textile, print what ever, suddenly I would see a collection
+13. Print is the sharpest and the strongest weapon of our party
+14. The flood of print has turned reading into a process of gulping rather than savoring
+15. ```*``` (All the above work well together)
