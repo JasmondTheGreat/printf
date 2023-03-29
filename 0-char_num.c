@@ -70,6 +70,8 @@ int _printf(const char *format, ...)
 
 	while (format[i] != '\0')
 	{
+		putchar(format[i]);
+
 		if (format[i] == '%' && format[i + 1] != '\0')
 		{
 			switch (format[i + 1])
@@ -77,11 +79,23 @@ int _printf(const char *format, ...)
 			case 'c':
 			{
 				dataCount += 1;
+				putchar(va_arg(ap, int));
+
 				break;
 			}
 			case 's':
 			{
+				char *string = va_arg(ap, char *);
 				dataCount += get_str_len(va_arg(ap, char *));
+
+				int i = 0;
+
+				while (string[i] != '\0')
+				{
+					putchar(string[i]);
+					i++;
+				}
+
 				break;
 			}
 			}
@@ -93,4 +107,9 @@ int _printf(const char *format, ...)
 	va_end(ap);
 
 	return (totalCount);
+}
+
+int main(void)
+{
+	_printf("Hello, I'm %s and my initial is %c\n", "Obafemi", 'O');
 }
